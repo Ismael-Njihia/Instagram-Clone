@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;600&family=Nunito+Sans&family=Roboto:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Welcome to Instagram clone</title>
+</head>
+
+<body>
+    <section id="container">
+        <div class="Center">
+            <div class="header">
+                <h1>Welcome Back!</h1>
+            </div>
+
+            <div class="login">
+                <form>
+                    <div class="mb-3">
+
+                        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter your email.">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+
+                    <div class="mb-3">
+
+                        <input type="password" class="form-control" id="Password" placeholder="Enter your Password">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="signin">sign in</button>
+                    <br>
+                    <a href="signup.html" id="signup">Don't have an account? Sign Up</a>
+                </form>
+
+                <div class="forgot">
+                    <a href="forgot.html">Forgot Password? Reset your Password now</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+
+
+    <script src="js/config.js"></script>
+    <script src="js/signin.js"></script>
+</body>
+
+</html>
