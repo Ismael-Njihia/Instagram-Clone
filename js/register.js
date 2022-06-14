@@ -6,9 +6,22 @@ document.getElementById("signup").onclick = function() {
 
 
     //summon firebase
-    firebase.auth().createUserWithEmailAndPassword(email, password).then(() => {
+    firebase.auth().createUserWithEmailAndPassword(email, password).then((userCred) => {
+        //getting the user ID
+        const userId = userCred.user.uid;
+        const date = new Date();
 
-        window.location.href = "index.html";
+        //creating a new collection in the database
+        firebase.firestore().collection("users").doc(userId).set({
+            date: date.toDateString(),
+            email: email,
+            userId: userId,
+            password: password
+
+        }).then(() => {
+            console.log("user created");
+            window.location.href = "index.html";
+        })
     }).catch((error) => {
         const error1 = error.message;
         console.log(error1);
